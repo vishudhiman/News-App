@@ -3,7 +3,7 @@ import { Typography } from '@material-ui/core';
 import wordsToNumbers from 'words-to-numbers';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
-import logo from './images/logo.png';
+
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles';
 
@@ -20,7 +20,7 @@ const App = () => {
 
 useEffect(() => {
     alanBtn({
-      key: 'eb2bc1664815f62df27fbc161c06b58c2e956eca572e1d8b807a3e2338fdd0dc/stage',
+      key:'eb2bc1664815f62df27fbc161c06b58c2e956eca572e1d8b807a3e2338fdd0dc/stage' ,
       onCommand: ({ command, articles, number }) => {
         if (command === 'newHeadlines') {
           setNewsArticles(articles);
@@ -54,7 +54,7 @@ useEffect(() => {
             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
           </div>
         ) : null}
-        <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="logo" />
+        <img src="https://ik.imagekit.io/sfatbd3jh/Vishal/preview_YnU5bl4wUD0.jpg?updatedAt=1628396172542" className={classes.alanLogo} alt="logo" />
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
       {/* <Modal isOpen={isOpen} setIsOpen={setIsOpen} /> */}
@@ -62,10 +62,9 @@ useEffect(() => {
         <div className={classes.footer}>
           <Typography variant="body1" component="h2">
             Created by
-            <a className={classes.link} href="https://www.linkedin.com/in/adrian-hajdin/"> Adrian Hajdin</a> -
-            <a className={classes.link} href="http://youtube.com/javascriptmastery"> JavaScript Mastery</a>
+            <a className={classes.link} href="https://www.linkedin.com/in/vishal-dhiman-6b600b196"> Vishal Dhiman</a> -
+            <a className={classes.link} href="https://vishaldhiman.xyz/"> Vishal Dhiman</a>
           </Typography>
-          <img className={classes.image} src={logo} height="50px" alt="JSMastery logo" />
         </div>
       ) : null}
     </div>
